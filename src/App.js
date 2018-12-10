@@ -24,12 +24,15 @@ class App extends Component {
       
       <form>
         <input type="text" placeholder="Your Guess Here"></input>
-        <input type="submit" placeholder="Submit Your Guess"></input>
+        <input type="submit"></input>
       </form>
 
-      <Guess current="Current Guess" recent="Recent Guesses" history="Guess History"/> 
-      {/* <UserGuess /> */}
-      <Feedback hot="Hot" cold="Cold"/>
+      {/* <Guess current="Current Guess" recent="Recent Guesses" history="Guess History"/> 
+      <Feedback hot="Hot" cold="Cold"/> */}
+      
+      <UserGuess />
+      <UserFeedback hot="Hot" cold="Cold"/>
+
 
       </div>
     );

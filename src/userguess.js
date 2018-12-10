@@ -1,15 +1,23 @@
 import React from 'react';
 import Guess from './Guess';
+import UserFeedback from './userfeedback';
 
 export default function Guesses() {
     const guessData = [
-        {currentGuess: 10, recentGuess: 5, history: [2, 7, 12]},
-        {currentGuess: 20, recentGuess: 15, history: [3, 8, 14]},
-        {currentGuess: 30, recentGuess: 25, history: [4, 9, 16]}
+        {currentGuess: 10, recentGuess: 5, allGuesses: <li>2, 7, 12</li>}
     ];
 
     const userGuess = guessData.map(guess => (
-        <li><Guess current={guess.currentGuess} recent={guess.recentGuess} history={guess.history}/></li>
+        <li>
+            <Guess 
+            currentGuess={guess.currentGuess} 
+            recentGuess={guess.recentGuess}
+            history={guess.allGuesses} />
+            </li>
     ));
     return <ul>{userGuess}</ul>
 }
+
+
+ {/* <p>Recent Guesses: {guess.recentGuess}</p> 
+            <p>All Guesses: {guess.history}</p> */}

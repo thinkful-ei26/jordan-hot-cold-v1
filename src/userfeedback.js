@@ -1,14 +1,15 @@
 import React from 'react';
 import Feedback from './Feedback';
 
-export default function FeedbackOptions() {
+export default function FeedbackOptions(props) {
     const feedbackData = [
-        {hot: "hot"},
-        {cold: "cold"},s
+        {hot: "hot", id: 1},
+        {cold: "cold", id: 2},
     ];
 
-    const userFeedback = feedbackData.map(guess => (
-        <li><Feedback hot={guess.hot} cold={guess.cold}/></li>
-    ));
+    const userFeedback =
+        <li>
+            <Feedback hot={props.hot} cold={props.cold}/>
+            </li>;
     return <ul>{userFeedback}</ul>
 }
