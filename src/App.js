@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
 import UserGuess from './userguess'; //creates a new tag <UserGuess>
-import Guess from './Guess.js'; //creates a new tag <Guess>
+// import Guess from './Guess.js'; //creates a new tag <Guess>
 import UserFeedback from './userfeedback';
-import Feedback from './Feedback';
+// import Feedback from './Feedback';
+// import GuessCount from './guesscount';
 
 //app starts everything off (we call it from index, etc)
 //anything we want to use as a component has to be referenced in app.js 
@@ -32,6 +33,7 @@ class App extends Component {
       
       <UserGuess />
       <UserFeedback hot="Hot" cold="Cold"/>
+      {/* <GuessCount /> */}
 
 
       </div>
